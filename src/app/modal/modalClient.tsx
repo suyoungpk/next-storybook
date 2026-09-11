@@ -19,8 +19,8 @@ export default function DigitalNoticeList() {
         const btn = document.getElementById(
           focusBtnRef.current!,
         ) as HTMLButtonElement | null;
-        btn?.focus();
-      }, 100);
+        btn?.focus({ preventScroll: true });
+      }, 200);
 
       return () => clearTimeout(timer);
     }
