@@ -1,6 +1,17 @@
+@import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --default-font-family:
+    "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+  --font-geist: var(--font-geist);
+  --letter-spacing: -0.04em;
+
+  /* Layout max-widths */
+  --max-width-full: 1920px; /* 전체 너비 컨테이너 */
+  --max-width-section: 1240px; /* 섹션 컨테이너 */
 }
 
 @media (prefers-color-scheme: dark) {

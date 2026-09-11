@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=375, initial-scale=1.0" />
+  <title>Figma 상품 상세페이지</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body { font-family: Pretendard, 'Red Hat Display', Nunito, Inter, sans-serif; }
+  </style>
+</head>
+<body class="bg-[#F6F7FB] min-h-screen flex flex-col items-center py-0">
+  <main class="w-[375px] min-h-screen bg-white mx-auto shadow-lg">
+    <!-- 상단 GNB -->
+    <div class="flex items-center h-[60px] px-4 border-b border-[#ECECEC]">
+      <img src="/public/figma-assets/ic-back.svg" alt="뒤로가기" class="w-5 h-5 mr-2" />
+      <span class="text-base font-bold text-black">상세페이지</span>
+    </div>
+    <!-- 상품 썸네일 -->
+    <div class="w-full h-[470px] bg-gray-100 flex items-center justify-center">
+      <img src="/public/figma-assets/product-thumbnail.png" alt="상품 썸네일" class="object-cover w-full h-full rounded-none" />
+    </div>
+    <!-- 상품 정보 -->
+    <section class="px-4 py-6">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="text-sm font-bold text-[#939393]">브랜드명</span>
+        <img src="/public/figma-assets/ic-like.svg" alt="좋아요" class="w-4 h-4" />
+      </div>
+      <h1 class="text-base font-semibold text-black leading-tight mb-2">PRODUCT NAME VERY VERY LONG LAND DUZUL IL KYUNG WOO</h1>
+      <div class="flex items-center gap-2 mb-2">
+        <div class="flex items-center gap-0.5">
+          <img src="/public/figma-assets/star-fill.svg" class="w-3 h-3" />
+          <img src="/public/figma-assets/star-fill.svg" class="w-3 h-3" />
+          <img src="/public/figma-assets/star-fill.svg" class="w-3 h-3" />
+          <img src="/public/figma-assets/star-fill.svg" class="w-3 h-3" />
+          <img src="/public/figma-assets/star-half.svg" class="w-3 h-3" />
+        </div>
+        <span class="text-xs text-[#CFCFCF] ml-1">210,525</span>
+        <span class="text-xs text-[#626262] ml-2 underline">135건의 리뷰 보기</span>
+        <img src="/public/figma-assets/ic-share.svg" alt="공유" class="w-4 h-4 ml-auto" />
+      </div>
+      <div class="flex items-end gap-2 mb-1">
+        <span class="text-lg font-bold text-black">150,050</span>
+        <span class="text-base font-medium text-black">원</span>
+        <span class="text-lg font-bold text-[#ED0000] ml-2">50%</span>
+      </div>
+      <div class="text-xs text-[#626262] mb-2">1,140P 적립</div>
+      <button class="w-full py-3 rounded-lg bg-[#ED0000] text-white font-bold text-base mb-2">쿠폰받기</button>
+    </section>
+    <!-- 추가혜택/배송정보 -->
+    <section class="px-4 py-4">
+      <h2 class="text-base font-bold text-black mb-2">추가혜택</h2>
+      <div class="flex flex-col gap-2 mb-4">
+        <div class="flex items-center justify-between bg-[#F6F7FB] rounded px-3 py-2">
+          <span class="text-xs text-[#939393]">신규회원 가입시</span>
+          <span class="text-xs text-[#626262] font-bold">10% 쿠폰</span>
+        </div>
+        <div class="flex items-center justify-between bg-[#F6F7FB] rounded px-3 py-2">
+          <span class="text-xs text-[#939393]">앱 다운로드 시</span>
+          <span class="text-xs text-[#626262] font-bold">적립금 3,000P</span>
+        </div>
+        <div class="flex items-center justify-between bg-[#F6F7FB] rounded px-3 py-2">
+          <span class="text-xs text-[#939393]">후기 적립</span>
+          <span class="text-xs text-[#626262] font-bold">최대 3,000P</span>
+        </div>
+      </div>
+      <h2 class="text-base font-bold text-black mb-2">배송정보</h2>
+      <div class="flex flex-col gap-1">
+        <div class="flex justify-between text-xs">
+          <span class="text-[#939393]">배송비</span>
+          <span class="text-[#626262]">무료배송</span>
+        </div>
+        <div class="flex justify-between text-xs">
+          <span class="text-[#939393]">배송예정</span>
+          <span class="text-[#626262]">예약 배송 2023-06-24 부터 순차출고</span>
+        </div>
+      </div>
+    </section>
+    <!-- 셀럽 스타일 -->
+    <section class="px-4 py-4">
+      <h2 class="text-base font-bold text-black mb-2">셀럽 스타일 <span class="text-xs text-[#5F5F5F]">총 32건</span></h2>
+      <div class="flex gap-4 overflow-x-auto pb-2">
+        <div class="flex-shrink-0 w-[206px] bg-white rounded-lg shadow p-2">
+          <img src="/public/figma-assets/celeb1.png" class="w-full h-[256px] object-cover rounded" />
+          <div class="mt-2">
+            <span class="block text-xs text-black font-bold">bahnyang</span>
+            <span class="block text-xs text-[#626262]">SIZE : FREE | COLOR: COBALT BLUE</span>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-[206px] bg-white rounded-lg shadow p-2">
+          <img src="/public/figma-assets/celeb2.png" class="w-full h-[256px] object-cover rounded" />
+          <div class="mt-2">
+            <span class="block text-xs text-black font-bold">에딧그램</span>
+            <span class="block text-xs text-[#626262]">SIZE : FREE | COLOR: COBALT BLUE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 프로모션 배너 -->
+    <section class="px-4 py-4">
+      <div class="w-full h-[100px] bg-[#000] rounded-lg flex items-center justify-center">
+        <span class="text-white text-xs">빅 프로모션 진행 시 노출 배너 (ON/OFF 가능)</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+      <p class="text-gray-700 text-base leading-relaxed">
+        이 플러그인은 Figma 디자인 시스템을 코드와 완벽하게 동기화할 수 있도록 지원합니다. 디자인 토큰, 색상, 타이포그래피, 컴포넌트 상태 등 모든 정보를 추출하여 Tailwind CSS, CSS 변수, Storybook 등 다양한 개발 환경에 적용할 수 있습니다.
+      </p>
+      <div class="grid grid-cols-2 gap-6 mt-6">
+        <div class="flex flex-col items-center">
+          <img src="/src/stories/assets/addon-library.png" alt="Addon Library" class="w-16 h-16 mb-2" />
+          <span class="text-sm text-gray-600">애드온 라이브러리</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="/src/stories/assets/context.png" alt="Context" class="w-16 h-16 mb-2" />
+          <span class="text-sm text-gray-600">컨텍스트 지원</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="/src/stories/assets/styling.png" alt="Styling" class="w-16 h-16 mb-2" />
+          <span class="text-sm text-gray-600">스타일링</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="/src/stories/assets/testing.png" alt="Testing" class="w-16 h-16 mb-2" />
+          <span class="text-sm text-gray-600">테스팅</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

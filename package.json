@@ -13,7 +13,9 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.92.0",
     "next": "15.3.5",
+    "openai": "^6.37.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -29,7 +31,10 @@
     "eslint-plugin-storybook": "^9.0.15",
     "gh-pages": "^6.3.0",
     "storybook": "^9.0.15",
-    "typescript": "^5"
+    "typescript": "^5",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^4"
   },
   "volta": {
     "node": "20.18.1"

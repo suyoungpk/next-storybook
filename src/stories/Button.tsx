@@ -1,10 +1,9 @@
+import React from "react";
+import "./figma-button.css";
 
-import React from 'react';
-import './figma-button.css';
-
-export type FigmaButtonType = 'primary' | 'secondary' | 'outline' | 'text';
-export type FigmaButtonSize = 'small' | 'medium' | 'large';
-export type FigmaButtonContent = 'text' | 'icon' | 'text_icon';
+export type FigmaButtonType = "primary" | "secondary" | "outline" | "text";
+export type FigmaButtonSize = "small" | "medium" | "large";
+export type FigmaButtonContent = "text" | "icon" | "text_icon";
 
 export interface ButtonProps {
   /** Button type (visual style) */
@@ -23,24 +22,27 @@ export interface ButtonProps {
   onClick?: () => void;
   /** Optional extra className */
   className?: string;
+  /** Custom style for overriding */
+  style?: React.CSSProperties;
 }
 
 /** Figma-based Button supporting all states, types, and content variations */
 export const Button = ({
-  type = 'primary',
-  size = 'medium',
-  contentType = 'text',
-  label = '',
+  type = "primary",
+  size = "medium",
+  contentType = "text",
+  label = "",
   icon,
   disabled = false,
   onClick,
-  className = '',
+  className = "",
+  style = {},
   ...props
 }: ButtonProps) => {
-  const base = 'figma-btn';
+  const base = "figma-btn";
   const typeClass = `figma-btn--${type}`;
   const sizeClass = `figma-btn--${size}`;
-  const classes = [base, typeClass, sizeClass, className].join(' ');
+  const classes = [base, typeClass, sizeClass, className].join(" ");
 
   return (
     <button
@@ -48,11 +50,12 @@ export const Button = ({
       className={classes}
       disabled={disabled}
       onClick={disabled ? undefined : onClick}
+      style={style}
       {...props}
     >
-      {contentType === 'icon' && icon}
-      {contentType === 'text' && label}
-      {contentType === 'text_icon' && (
+      {contentType === "icon" && icon}
+      {contentType === "text" && label}
+      {contentType === "text_icon" && (
         <>
           {icon && <span className="figma-btn__icon">{icon}</span>}
           <span>{label}</span>
