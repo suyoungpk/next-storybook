@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@storybook/addon-designs": "^10.0.1",
+    "@storybook/addon-designs": "^10.6.0",
     "@storybook/nextjs": "^10.6.0",
     "@types/node": "^20",
     "@types/react": "^19",
