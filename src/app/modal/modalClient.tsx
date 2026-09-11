@@ -15,14 +15,14 @@ export default function DigitalNoticeList() {
       //     focusBtnRef.current!,
       //   ) as HTMLButtonElement | null;
       //   btn?.focus();
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          const btn = document.getElementById(
-            focusBtnRef.current!,
-          ) as HTMLButtonElement | null;
-          btn?.focus();
-        });
-      });
+      const timer = setTimeout(() => {
+        const btn = document.getElementById(
+          focusBtnRef.current!,
+        ) as HTMLButtonElement | null;
+        btn?.focus();
+      }, 100);
+
+      return () => clearTimeout(timer);
     }
   }, [isModalOpen]);
 
