@@ -6,15 +6,19 @@ import Modal from "./Modal";
 export default function DigitalNoticeList() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const focusBtnRef = useRef<string | null>(null);
+  const [state, setState] = useState<string | null>(null);
+  const [state2, setState2] = useState<string | null>(null);
   const list = {
     button: ["test", "test", "test", "test", "test", "test", "test", "test"],
   };
   useEffect(() => {
     if (!isModalOpen && focusBtnRef.current) {
+      setState(focusBtnRef.current);
       const btn = document.getElementById(
         focusBtnRef.current!,
       ) as HTMLButtonElement | null;
       btn?.focus();
+      setState2("focused");
     }
   }, [isModalOpen]);
 
@@ -24,6 +28,8 @@ export default function DigitalNoticeList() {
 
   return (
     <div>
+      {state}
+      <br>{state2}</br>
       <ul>
         {list.button.map((item, index) => (
           <li key={`mobileModal${index}`}>
