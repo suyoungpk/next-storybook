@@ -14,10 +14,18 @@ export default function DigitalNoticeList() {
   useEffect(() => {
     if (!isModalOpen && focusBtnRef.current) {
       setState(focusBtnRef.current);
-      const btn = document.getElementById(
-        focusBtnRef.current!,
-      ) as HTMLButtonElement | null;
-      btn?.focus();
+      //   const btn = document.getElementById(
+      //     focusBtnRef.current!,
+      //   ) as HTMLButtonElement | null;
+      //   btn?.focus();
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          const btn = document.getElementById(
+            focusBtnRef.current!,
+          ) as HTMLButtonElement | null;
+          btn?.focus();
+        });
+      });
       setState2("focused");
     }
   }, [isModalOpen]);
