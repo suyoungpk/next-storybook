@@ -25,7 +25,7 @@ export default function DigitalNoticeList() {
   return (
     <div>
       <ul>
-        {list.button.map((index) => (
+        {list.button.map((item, index) => (
           <li key={`mobileModal${index}`}>
             <button
               id={`mobileModal${index}`}
@@ -35,7 +35,7 @@ export default function DigitalNoticeList() {
               }}
               className="btn-inquiry h-[48px] !px-6 sm:-my-2 sm:h-[50px] sm:!px-5"
             >
-              test
+              {item}
             </button>
           </li>
         ))}
