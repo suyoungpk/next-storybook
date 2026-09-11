@@ -31,7 +31,7 @@ export default function Modal({
   const touchStartYRef = useRef(0);
   // const scrollPositionRef = useRef({ x: 0, y: 0 });
   const [isMounted, setIsMounted] = useState(false);
-  const previousActiveElementRef = useRef<HTMLElement | null>(null);
+  // const previousActiveElementRef = useRef<HTMLElement | null>(null);
 
   // 클라이언트에서만 마운트되도록 제어 (Hydration 에러 방지)
   useEffect(() => {
@@ -65,7 +65,7 @@ export default function Modal({
     if (!modalContentRef.current || !isOpen || !isMounted) return;
 
     // 모달이 열릴 때 현재 포커스된 요소 저장
-    previousActiveElementRef.current = document.activeElement as HTMLElement;
+    // previousActiveElementRef.current = document.activeElement as HTMLElement;
 
     // 첫 번째 포커스 가능한 요소에 포커스
     setTimeout(() => {
@@ -112,9 +112,9 @@ export default function Modal({
       document.removeEventListener("keydown", handleKeyDown);
 
       // 이전에 포커스되어 있던 요소로 복원
-      if (previousActiveElementRef.current) {
-        previousActiveElementRef.current.focus();
-      }
+      // if (previousActiveElementRef.current) {
+      //   previousActiveElementRef.current.focus();
+      // }
     };
   }, [modalContentRef, isOpen, isMounted, onClose]);
 
